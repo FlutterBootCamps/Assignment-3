@@ -55,9 +55,9 @@ class ToDoTaskPage extends StatelessWidget {
                                 task: state.tasks[index],
                                 colors: text,
                                 onPress: () {
-                                  context
-                                      .read<TaskManagerBloc>()
-                                      .add(AddCompletedTaskEvent(tasks: state.tasks[index]));
+                                  context.read<TaskManagerBloc>().add(
+                                      AddCompletedTaskEvent(
+                                          tasks: state.tasks[index]));
                                 },
                               ),
                               const SizedBox(
@@ -74,7 +74,7 @@ class ToDoTaskPage extends StatelessWidget {
                     TasksListWelcoming(
                         taskNumber: GetIt.I.get<TaskData>().tasks.length),
                     SizedBox(
-                      height: context.getHeight() / 3,
+                      height: context.getHeight() / 4,
                     ),
                     Text(
                       "There are no tasks yet",
@@ -92,7 +92,7 @@ class ToDoTaskPage extends StatelessWidget {
                   TasksListWelcoming(
                       taskNumber: GetIt.I.get<TaskData>().tasks.length),
                   SizedBox(
-                    height: context.getHeight() / 3,
+                    height: context.getHeight() / 4,
                   ),
                   Text(
                     "There are no tasks yet",
@@ -108,7 +108,6 @@ class ToDoTaskPage extends StatelessWidget {
         ),
       ),
       floatingActionButton: Button(),
-      
     );
   }
 }

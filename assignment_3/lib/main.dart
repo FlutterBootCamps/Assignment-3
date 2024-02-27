@@ -4,8 +4,9 @@ import 'package:assignment_3/utils/set_up.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
-  setup();
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await setup();
   runApp(const MainApp());
 }
 
