@@ -9,4 +9,4 @@ const paleWhite = Color(0xffF5F7F9);
 const azureColor = Color(0xffC6CFDC);
 const shadowColor = Color(0x80C6CFDC);
 const noColor = Colors.transparent;
-Color redColor = Colors.red.shade400;
+const redColor = Color(0xffFF5E5E);

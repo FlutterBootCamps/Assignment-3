@@ -21,6 +21,18 @@ final class DeleteAllTasksEvent extends TaskEvent {
 
 final class CompleteTaskEvent extends TaskEvent {
   final Task task;
+  final bool isHomePage;
 
-  CompleteTaskEvent({required this.task});
+  CompleteTaskEvent({required this.isHomePage,required this.task});
+}
+
+final class ShowCompletedListEvent extends TaskEvent {
+
+}
+
+final class EditTaskEvent extends TaskEvent {
+  final Task task;
+  final String taskText;
+
+  EditTaskEvent({required this.task, required this.taskText});
 }

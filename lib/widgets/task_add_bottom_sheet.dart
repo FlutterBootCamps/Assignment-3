@@ -1,17 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:tasky_task_manager/helpers/extensions/screen_helper.dart';
+import 'package:tasky_task_manager/models/task_model.dart';
 import 'package:tasky_task_manager/utils/colors.dart';
 import 'package:tasky_task_manager/utils/fonts.dart';
 
-class TaskAddBottomSheet extends StatelessWidget {
+class TaskAddBottomSheet extends StatefulWidget {
   const TaskAddBottomSheet({
     super.key,
-    required this.noteController, this.onPreseed,
+    required this.noteController, this.onPreseed, required this.buttonText, required this.hintText, this.task,
   });
 
   final TextEditingController noteController;
   final Function()? onPreseed;
+  final String buttonText;
+  final String hintText;
+  final Task? task;
 
+  @override
+  State<TaskAddBottomSheet> createState() => _TaskAddBottomSheetState();
+}
+
+class _TaskAddBottomSheetState extends State<TaskAddBottomSheet> {
+
+  @override
+  void initState() {
+    if (widget.task != null){
+      widget.noteController.text = widget.task!.task;
+    }
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,9 +42,9 @@ class TaskAddBottomSheet extends StatelessWidget {
         children: [
           TextField(
             style: const TextStyle(color: slatePurple, fontFamily: urbanistFont, fontSize: 14,),
-            controller: noteController,
+            controller: widget.noteController,
             decoration: InputDecoration(
-              hintText: "Add a note...",
+              hintText: widget.hintText,
               hintStyle: const TextStyle(color: azureColor, fontFamily: urbanistFont, fontSize: 14, fontWeight: FontWeight.w500),
               prefixIcon: Image.asset("assets/icons/pencil.png"),
               border: const UnderlineInputBorder(
@@ -36,7 +53,7 @@ class TaskAddBottomSheet extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 48,),
-          Align( alignment: Alignment.centerRight, child: TextButton(onPressed: onPreseed, child: const Text("Create", style: TextStyle(color: oceanBlueColor, fontFamily: urbanistFont, fontSize: 16, fontWeight: FontWeight.bold),)))
+          Align( alignment: Alignment.centerRight, child: TextButton(onPressed: widget.onPreseed, child: Text(widget.buttonText, style: const TextStyle(color: oceanBlueColor, fontFamily: urbanistFont, fontSize: 16, fontWeight: FontWeight.bold),)))
         ],
       ),
     );

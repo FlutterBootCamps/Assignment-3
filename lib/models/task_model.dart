@@ -3,7 +3,7 @@ class Task {
     required this.task,
     required this.isCompleted,
   });
-  late final String task;
+  late String task;
   late bool isCompleted;
   
   Task.fromJson(Map<String, dynamic> json){

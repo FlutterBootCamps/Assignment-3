@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get_it/get_it.dart';
 import 'package:tasky_task_manager/bloc/task_bloc.dart';
 import 'package:tasky_task_manager/data_layer/home_data_layer.dart';
 import 'package:tasky_task_manager/helpers/extensions/screen_helper.dart';
+import 'package:tasky_task_manager/screens/modify_page.dart';
 import 'package:tasky_task_manager/utils/colors.dart';
 import 'package:tasky_task_manager/utils/fonts.dart';
 import 'package:tasky_task_manager/widgets/main_info_header.dart';
@@ -16,7 +16,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final locator = GetIt.I.get<HomeData>();
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
@@ -55,8 +54,10 @@ class HomePage extends StatelessWidget {
                 builder: (context, state) {
                   return MainInfoHeader(
                     name: "John",
-                    numOfTasks: locator.taskList.length,
-                    onTap: () {},
+                    numOfTasks: locator.getAllIncompleteTasks().length,
+                    onTap: () {
+                      context.push(context, const ModifyPage());
+                    },
                   );
                 },
               ),
@@ -73,12 +74,16 @@ class HomePage extends StatelessWidget {
                       context.showErrorSnackBar(context, state.msg);
                     }else if (state is AddedTaskState){
                       context.showSuccessSnackBar(context, state.msg);
+                    }else if (state is CompletedTaskState){
+                      if (state.isHomePage){
+                      context.showSuccessSnackBar(context, state.msg);
+                      }
                     }
                   },
                   builder: (context, state) {
                     if (state is AddedTaskState) {
                       return ListView(
-                          children: locator.getAllIncompleteTasks());
+                          children: state.listOfTasks);
                     } else {
                       return ListView(
                           children: locator.getAllIncompleteTasks());
@@ -103,8 +108,10 @@ class HomePage extends StatelessWidget {
                         .read<TaskBloc>()
                         .add(AddTaskEvent(taskText: noteController.text));
                         noteController.clear();
-                        
+                        Navigator.pop(context);
                   },
+                  buttonText: "Create",
+                  hintText: "Add a note...",
                 );
               },
             );
