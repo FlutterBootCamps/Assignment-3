@@ -1,0 +1,50 @@
+name: task_manager
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.4
+  flutter_svg: ^2.0.10+1
+  get_it: ^7.6.7
+  get_storage: ^2.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  fonts:
+    - family: Urbanist
+      fonts:
+        - asset: assets/font/Urbanist-VariableFont_wght.ttf
+        - asset: assets/font/Urbanist-Italic-VariableFont_wght.ttf
+        - asset: assets/font/static/Urbanist-Regular.ttf
+        - asset: assets/font/static/Urbanist-Italic.ttf
+        - asset: assets/font/static/Urbanist-Bold.ttf
+        - asset: assets/font/static/Urbanist-BoldItalic.ttf
+        - asset: assets/font/static/Urbanist-Black.ttf
+        - asset: assets/font/static/Urbanist-BlackItalic.ttf
+        - asset: assets/font/static/Urbanist-ExtraBold.ttf
+        - asset: assets/font/static/Urbanist-ExtraBoldItalic.ttf
+        - asset: assets/font/static/Urbanist-ExtraLight.ttf
+        - asset: assets/font/static/Urbanist-ExtraLightItalic.ttf
+        - asset: assets/font/static/Urbanist-Light.ttf
+        - asset: assets/font/static/Urbanist-LightItalic.ttf
+        - asset: assets/font/static/Urbanist-Medium.ttf
+        - asset: assets/font/static/Urbanist-MediumItalic.ttf
+        - asset: assets/font/static/Urbanist-SemiBold.ttf
+        - asset: assets/font/static/Urbanist-SemiBoldItalic.ttf
+        - asset: assets/font/static/Urbanist-Thin.ttf
+        - asset: assets/font/static/Urbanist-ThinItalic.ttf
+         
+  uses-material-design: true
+  assets:
+    - assets/icon/
+    - assets/image/
