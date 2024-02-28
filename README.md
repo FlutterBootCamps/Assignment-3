@@ -17,7 +17,7 @@ ToDo task page with a tasks:
 
 the three dots icon will open the edit page where the user can delete a task by the delete icon or he can delete all the tasks if he presses the delete all text:
 
-<img width="366" alt="Screenshot 2024-02-28 at 1 45 42 AM" src="https://github.com/shaimaathu/Assignment-3/assets/155615972/47176aad-4e0e-4ff2-b475-7553360219f9">
+<img width="364" alt="Screenshot 2024-02-28 at 3 47 51 AM" src="https://github.com/shaimaathu/Assignment-3/assets/155615972/53a4836f-2a88-4242-96c1-9dfdff394bca">
 
 delete a task by the delete icon :
 
