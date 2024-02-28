@@ -1,29 +1,16 @@
-# Assignment-3
+# start2
 
-## Description
-in this assigment you will create a TODO app 
+A new Flutter project.
 
-## Functionalities to Implement:
-1. create new task
-2. displsy tasks in main screen
-3. allow user to delete tasks
+## Getting Started
 
-## Requirements:
-You must utilize the following:  
--	git_it  
--	get storage or shared preferences   
--	BLoc
-<br></br>
-### UI to be implemented:  [Figma Link](https://www.figma.com/file/SgY1ujlxccU90X2CQprjWf/(Todo-App)?type=design&node-id=0-1&mode=design&t=7MTcensERNTDS1fr-0)
+This project is a starting point for a Flutter application.
 
-## Submission:
-1. Flutter Project:
-    - Submit the complete Flutter project folder, including all necessary files (screens and components).
-2. GitHub Submission:
-   - Create a Fork from the project’s GitHub repository.
-   - Create a new branch with your name.
-   - Commit frequently with descriptive messages to show your progress.
-   - Finally, create a Pull Request to the project’s original repository.
+A few resources to get you started if this is your first Flutter project:
 
-## Deadline: 
-28/2/2024 - 9:59 AM
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
