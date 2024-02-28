@@ -15,10 +15,10 @@ class CompletidTaskPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-      backgroundColor: Colors.white,
+        backgroundColor: Colors.white,
         actions: [
           Text(
-            "John",
+            " John",
             style: GoogleFonts.urbanist(
                 fontSize: 18, fontWeight: FontWeight.w600, color: text),
           ),
