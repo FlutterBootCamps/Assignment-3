@@ -17,7 +17,9 @@ class ToDoTaskPage extends StatelessWidget {
   Widget build(BuildContext context) {
     context.read<TaskManagerBloc>().add(LaudingDataEvent());
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         actions: [
           Text(
             "John",

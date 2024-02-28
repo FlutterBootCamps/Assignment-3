@@ -13,7 +13,9 @@ class CompletidTaskPage extends StatelessWidget {
   Widget build(BuildContext context) {
     context.read<TaskManagerBloc>().add(LaudingDataEvent());
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+      backgroundColor: Colors.white,
         actions: [
           Text(
             "John",
@@ -54,8 +56,7 @@ class CompletidTaskPage extends StatelessWidget {
                                 onPress: () {
                                   context.read<TaskManagerBloc>().add(
                                       (AddTaskEvent(
-                                          tasks: state
-                                              .completedTasks[index])));
+                                          tasks: state.completedTasks[index])));
                                 },
                                 isVisible: true,
                               ),

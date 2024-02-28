@@ -30,9 +30,9 @@ class Button extends StatelessWidget {
             ]),
         onPressed: () {
           showModalBottomSheet<void>(
+            barrierColor: Colors.white.withOpacity(0),
             context: context,
             elevation: 10,
-            backgroundColor: Colors.red,
             builder: (BuildContext context) {
               return Container(
                 padding: const EdgeInsets.all(20),
@@ -41,7 +41,12 @@ class Button extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: const [
-                      BoxShadow(color: Colors.grey, offset: Offset(0, 3))
+                      BoxShadow(
+                          color: Colors.grey,
+                          offset: Offset(5, 5),
+                          spreadRadius: 10,
+                          blurRadius: 20,
+                          blurStyle: BlurStyle.normal)
                     ]),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
