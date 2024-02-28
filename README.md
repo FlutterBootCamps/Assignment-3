@@ -10,7 +10,7 @@ add a task:
 
 <img width="364" alt="Screenshot 2024-02-28 at 3 47 00 AM" src="https://github.com/shaimaathu/Assignment-3/assets/155615972/24bd7cbe-e42c-41c2-b8d4-1f0564498861">
 
-ToDo task page with a tasks:
+ToDo task page with tasks:
 
 <img width="368" alt="Screenshot 2024-02-28 at 3 48 59 AM" src="https://github.com/shaimaathu/Assignment-3/assets/155615972/35799be5-cfd2-4c89-9bd1-33c321e01404">
 
@@ -21,11 +21,14 @@ the three dots icon will open the edit page where the user can delete a task by 
 
 delete a task by the delete icon :
 
-<img width="360" alt="Screenshot 2024-02-28 at 1 45 56 AM" src="https://github.com/shaimaathu/Assignment-3/assets/155615972/f0bb7d04-d26b-4e83-b507-000b752addfb">
+<img width="362" alt="Screenshot 2024-02-28 at 3 57 37 AM" src="https://github.com/shaimaathu/Assignment-3/assets/155615972/85cdb641-af0d-4390-8471-218f527835f7">
+<img width="362" alt="Screenshot 2024-02-28 at 3 57 24 AM" src="https://github.com/shaimaathu/Assignment-3/assets/155615972/fcb1654a-6cbe-4b14-8c33-7249e4603763">
+
 
 delete all the tasks by pressing the delete all text:
 
-<img width="360" alt="Screenshot 2024-02-28 at 1 46 07 AM" src="https://github.com/shaimaathu/Assignment-3/assets/155615972/48887cd7-14b0-41ca-aa63-f6f3b100d8b4">
+<img width="375" alt="Screenshot 2024-02-28 at 3 58 51 AM" src="https://github.com/shaimaathu/Assignment-3/assets/155615972/c18bc98f-6959-40c2-a0b8-5ba155af19c7">
+<img width="362" alt="Screenshot 2024-02-28 at 3 57 37 AM" src="https://github.com/shaimaathu/Assignment-3/assets/155615972/40a1957c-7fe8-4313-b227-0467641e0fbb">
 
 the user can press the checkbox to mark the task as a completed task then it will move the task to the completed task page:
 
